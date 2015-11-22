@@ -1,6 +1,7 @@
 package ru.kpfu.itis.repository;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.log4j.Logger;
 import ru.kpfu.itis.model.User;
 import ru.kpfu.itis.repository.connect.DataBaseConnect;
 
@@ -9,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class RegistrationUserRepository {
+    private static final Logger log = Logger.getLogger(RegistrationUserRepository.class);
+
     public void registrationUser(User user) {
         Connection connection = DataBaseConnect.getInstance().getConnection();
         try {
@@ -25,10 +28,12 @@ public class RegistrationUserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: " + user.getLogin() + " registered" + " email: " + user.getEmail());
         } catch (SQLException e) {
             e.printStackTrace();
             try {
                 if (connection != null) connection.rollback();
+                log.error("Registration failed with params " + user.getLogin() + " " + user.getEmail() + " " + user.getLastName());
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }

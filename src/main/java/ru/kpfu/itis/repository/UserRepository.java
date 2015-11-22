@@ -2,6 +2,7 @@ package ru.kpfu.itis.repository;
 
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.log4j.Logger;
 import ru.kpfu.itis.model.User;
 import ru.kpfu.itis.repository.connect.DataBaseConnect;
 
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepository {
+    private static final Logger log = Logger.getLogger(UserRepository.class);
 
     public List getPostUser(User user) {
 
@@ -75,6 +77,7 @@ public class UserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: " + username + " saved avatar");
         } catch (SQLException e) {
             e.printStackTrace();
             try {
@@ -98,6 +101,7 @@ public class UserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: " + username + " updated avatar");
             return oldAvatar;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -212,6 +216,7 @@ public class UserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: "+username+" followed on "+usernameFollow);
         } catch (SQLException e) {
             e.printStackTrace();
             try {
@@ -234,6 +239,7 @@ public class UserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: "+username+" unsubscribed from "+usernameFollow);
         } catch (SQLException e) {
             e.printStackTrace();
             try {

@@ -1,5 +1,6 @@
 package ru.kpfu.itis.repository;
 
+import org.apache.log4j.Logger;
 import ru.kpfu.itis.repository.connect.DataBaseConnect;
 
 import java.sql.Connection;
@@ -9,7 +10,10 @@ import java.sql.SQLException;
 
 
 public class AuthUserRepository {
+    private static final Logger log = Logger.getLogger(AuthUserRepository.class);
+
     public boolean authUser(String login, String password) {
+        log.info("Auth user with param"+ login);
         String returnedUsername = null;
         String returnedPassword = null;
         Connection connection = DataBaseConnect.getInstance().getConnection();
@@ -31,7 +35,7 @@ public class AuthUserRepository {
             return false;
         }
 
-        if(returnedUsername != null) {
+        if (returnedUsername != null) {
             return returnedPassword.equals(password);
         }
         return false;

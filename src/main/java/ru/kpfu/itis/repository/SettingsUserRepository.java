@@ -1,6 +1,7 @@
 package ru.kpfu.itis.repository;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.log4j.Logger;
 import ru.kpfu.itis.repository.connect.DataBaseConnect;
 
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
  * Created by vladislav on 09.11.15.
  */
 public class SettingsUserRepository {
+    private static final Logger log = Logger.getLogger(SettingsUserRepository.class);
 
     public void updateInfoUser(String firstname, String lastname, String username) {
         Connection connection = DataBaseConnect.getInstance().getConnection();
@@ -27,6 +29,7 @@ public class SettingsUserRepository {
             stmt.execute();
             connection.commit();
             stmt.close();
+            log.info("User: "+username+" updated information on himself "+firstname+" "+lastname);
         } catch (SQLException e) {
             e.printStackTrace();
             try {
