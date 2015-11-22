@@ -1,0 +1,296 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-bottom: 100px;
+    background-attachment: fixed;
+    background-image: url("../image/background/congruent_pentagon/congruent_pentagon/congruent_pentagon.png");
+    background-repeat: repeat;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    border-top: 1px solid #dcdcdc;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.navbar-default {
+    border-bottom: inherit;
+!important;
+}
+
+.navbar .nav li a {
+    margin: 0 3px;
+    background-color: transparent !important;
+    border-bottom: solid 2px transparent;
+}
+
+.navbar .nav li a:hover,
+.navbar .nav li a:active {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+    border-bottom: solid 2px #5b9bd1;
+    color: #333333;
+}
+
+.navbar .nav li.active a,
+.navbar .nav li.active a:hover {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+    border-bottom: solid 2px #5b9bd1;
+    color: #333333;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .nav li.active a,
+    .navbar .nav li.active a:hover {
+        color: #5b9bd1;
+        border-bottom: 0px;
+    }
+
+    .navbar .nav li a:hover,
+    .navbar .nav li a:active {
+        border-bottom: solid 1px transparent;
+    }
+
+}
+
+/*Auth*/
+.form-signin {
+    max-width: 330px;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/*Registration*/
+#registration-container {
+    border: 1px double #1b6d85;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+#registration-container input {
+    margin-bottom: 20px;
+}
+
+#registration-container label {
+    color: #7e7e7e;
+}
+
+#reg-avatar {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 5px 0 10px 0;
+    background: #fff;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #ffffff ;
+    min-height: 460px;
+}
+
+.panel {
+    border: inherit;
+!important;
+}
+
+.panel-heading {
+    border-bottom: inherit;
+!important;
+}
+
+.album-item {
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.name-album {
+    font-family: "Comic Sans MS";
+    width: 100%;
+    color: #5a7391;
+    padding: 4px;
+
+}
+
+.likes-album {
+    float: right;
+    font-size: 13px;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+.likes-album p{
+    color: #5a7391;
+}
+.likes-album i{
+    color: red;
+}
+.likes-album i:hover{
+    color: red;
+}
+
+#message-reg {
+    height: 20px;
+    margin-bottom: 10px;
+}
+#message-reg label{
+    color: red;
+}
+.error{
+    color:red;
+    height:20px;
+}
+
+.post-text{
+    padding-left:20px;
+    word-wrap: break-word;
+}
+
+.btn-follow {
+    border: 0px;!important;
+    border-radius: inherit;!important;
+}
+
+#follow{
+    color:limegreen;
+}
+
+#unFollow{
+    color:red;
+}
